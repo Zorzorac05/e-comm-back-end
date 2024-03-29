@@ -39,7 +39,7 @@ router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
   const tag = await Tag.update(
     {
-      tag_name: req.body.category_name
+      tag_name: req.body.tag_name
     },
     {
       where: {
@@ -57,7 +57,7 @@ router.delete('/:id', async (req, res) => {
       id: req.params.id,
     }
   });
-  return res.json(category);
+  return res.json(tag);
 });
 
 module.exports = router;
